@@ -1,0 +1,51 @@
+C51 COMPILER V9.60.0.0   BELT1                                                             04/24/2021 17:03:35 PAGE 1   
+
+
+C51 COMPILER V9.60.0.0, COMPILATION OF MODULE BELT1
+OBJECT MODULE PLACED IN .\Objects\belt1.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE belt1.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\bel
+                    -t1.lst) TABS(2) OBJECT(.\Objects\belt1.obj)
+
+line level    source
+
+   1          #include <REG52.h> 
+   2           sbit DRIVER_SENSOR_PIN=P0^0;
+   3           sbit SEAT_BELT_SENSOR_PIN=P0^1;
+   4           
+   5           sbit PASSENGER_SENSOR_PIN2=P1^0;
+   6           sbit SEAT_BELT_SENSOR_PIN2=P1^1;
+   7           
+   8           
+   9           sbit ALARM_LED_PIN=P3^7;
+  10           
+  11           void main(){
+  12   1       
+  13   1       //P0-input port
+  14   1       P0=0xFF;
+  15   1        P1=0xFF;
+  16   1         
+  17   1         
+  18   1         while(1){
+  19   2      
+  20   2      if(DRIVER_SENSOR_PIN == 0 && SEAT_BELT_SENSOR_PIN == 1 ||PASSENGER_SENSOR_PIN2 == 0 && SEAT_BELT_SENSOR_PI
+             -N2 == 1 ){
+  21   3      ALARM_LED_PIN = 0;}
+  22   2      else {
+  23   3      ALARM_LED_PIN = 1;
+  24   3      }
+  25   2         }
+  26   1       }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     26    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

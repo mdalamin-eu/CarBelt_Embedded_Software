@@ -1,0 +1,89 @@
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    04/24/2021  17:03:36  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.2.0, INVOKED BY:
+C:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\belt1.obj TO .\Objects\belt1 PRINT (.\Listings\belt1.m51) RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\belt1.obj (BELT1)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  .\Objects\belt1 (BELT1)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            IDATA   0008H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     07FDH                  *** GAP ***
+            CODE    0800H     001AH     UNIT         ?PR?MAIN?BELT1
+            CODE    081AH     000CH     UNIT         ?C_C51STARTUP
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\belt1 (BELT1)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?BELT1
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\belt1 (BELT1)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        BELT1
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0080H         PUBLIC        P0
+  D:0090H         PUBLIC        P1
+  D:00B0H         PUBLIC        P3
+  D:00A8H         PUBLIC        IE
+  D:00B8H         PUBLIC        IP
+  C:0800H         PUBLIC        main
+  D:0098H         PUBLIC        SCON
+  D:0088H         PUBLIC        TCON
+  B:0080H.1       PUBLIC        SEAT_BELT_SENSOR_PIN
+  B:0080H.0       PUBLIC        DRIVER_SENSOR_PIN
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  04/24/2021  17:03:36  PAGE 2
+
+
+  B:0090H.0       PUBLIC        PASSENGER_SENSOR_PIN2
+  D:00C8H         PUBLIC        T2CON
+  B:00B0H.7       PUBLIC        ALARM_LED_PIN
+  B:0090H.1       PUBLIC        SEAT_BELT_SENSOR_PIN2
+  D:00D0H         PUBLIC        PSW
+  -------         PROC          MAIN
+  C:0800H         LINE#         11
+  C:0800H         LINE#         14
+  C:0803H         LINE#         15
+  C:0806H         LINE#         18
+  C:0806H         LINE#         20
+  C:0812H         LINE#         21
+  C:0816H         LINE#         22
+  C:0816H         LINE#         23
+  C:0818H         LINE#         24
+  C:0818H         LINE#         25
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        BELT1
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 001AH BYTE ( 1%) *
+******************************************************************************
+
+Program Size: data=9.0 xdata=0 code=41
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
